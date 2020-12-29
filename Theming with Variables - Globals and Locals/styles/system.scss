@@ -1,0 +1,14 @@
+// Global variables
+@import "_global-variables";
+
+// base and browser reset
+@import "_base";
+
+// Components
+@import "../alert/alert";
+@import "../button/button";
+
+// Styles for the examples
+.example {
+  margin: 1rem 0;
+}

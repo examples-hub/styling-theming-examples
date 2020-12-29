@@ -1,0 +1,288 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Overpass:300,400,700");
+:root {
+  --global--link--Color: var(--global--primary--Color);
+  --global--link--TextDecoration: none;
+  --global--link--hover-Color: #0088ce;
+  --global--link--hover--TextDecoration: underline;
+  --global--BorderWidth: 1px;
+  --global--dark--BorderColor: #bbb;
+  --global--light--BorderColor: #d1d1d1;
+  --global--spacer--xxs: 0.125rem;
+  --global--spacer--xs: 0.25rem;
+  --global--spacer--sm: 0.5rem;
+  --global--spacer--md: 1rem;
+  --global--spacer--lg: 2rem;
+  --global--spacer--xl: 3rem;
+  --global--primary--Color: #39a5dc;
+  --global--primary--dark--Color: #0088ce;
+  --global--danger--Color: #c00;
+  --global--danger--dark--Color: #a30000;
+  --global--warning--Color: #ec7a08;
+  --global--warning--dark--Color: #b35c00;
+  --global--dark--Color: #292e34;
+  --global--dark--off--Color: #8b8d8f;
+  --global--light--Color: #fafafa;
+  --global--light--off-Color: #d1d1d1;
+  --global--light--BackgroundColor: #fafafa;
+  --global--light--off--BackgroundColor: #ededed;
+  --global--dark--BackgroundColor: #292e34;
+  --global--dark--off--BackgroundColor: #393f44;
+  --global--breakpoint--xs: 0;
+  --global--breakpoint--sm: 24em;
+  --global--breakpoint--md: 50;
+  --global--breakpoint--lg: 50em;
+  --global--breakpoint--xl: 73em;
+  --global--sans-serif--FontFamily: “Overpass”, Overpass, “open sans”, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --global--hero-title--FontSize: 3rem;
+  --global--main-title--FontSize: 2rem;
+  --global--secondary--title-FontSize: 1.5rem;
+  --global--sub-title--FontSize: 1.2rem;
+  --global--body--FontSize: 1rem;
+  --global--caption--FontSize: 0.8rem;
+  --global--sm--LineHeight: 1.1;
+  --global--md--LineHeight: 1.5;
+  --global--lg--LineHeight: 2;
+  --global--light--FomntWeight: 300;
+  --global--normal--FomntWeight: 400;
+  --global--bold--FomntWeight: 700;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: var(--global--normal--FontWeight);
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+img,
+embed,
+iframe,
+object,
+audio,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+body {
+  font-family: var(--global--sans-serif--FontFamily);
+  font-size: var(--global--body--FontSize);
+  font-weight: var(--global--normal--FontWeight);
+  line-height: var(--global--md--LineHeight);
+  color: var(--global--dark--Color);
+  text-align: left;
+  background-color: var(--global--light--BackgroundColor);
+}
+
+a {
+  color: var(--global--link--Color);
+  text-decoration: var(--global--link--TextDecoration);
+}
+
+a:hover {
+  color: var(--global--link--hover--Color);
+  text-decoration: var(--global--link--hover--TextDecoration);
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.alert {
+  --alert--BorderWidth: var(--global--BorderWidth);
+  --alert--BorderColor: var(--global--dark--BorderColor);
+  --alert--Color: var(--global--dark--Color);
+  --alert--PaddingTop: var(--global--spacer--sm);
+  --alert--PaddingRight: var(--global--spacer--sm);
+  --alert--PaddingBottom: var(--global--spacer--sm);
+  --alert--PaddingLeft: var(--global--spacer--sm);
+  --alert__title--FontSize: var(--global--secondary-title--FontSize);
+  --alert__title--MarginBottom: var(--global--spacer--xxs);
+  --alert--primary--BorderColor: var(--global--primary--Color);
+  --alert--primary--Color: var(--global--primary--Color);
+  --alert--warning--BorderColor: var(--global--warning--Color);
+  --alert--warning--Color: var(--global--warning--Color);
+  --alert--danger--BorderColor: var(--global--danger--Color);
+  --alert--danger--Color: var(--global--danger--Color);
+  border: var(--alert--BorderWidth, 1px) solid var(--alert--BorderColor, #bbb);
+  color: var(--alert--Color, #292e34);
+  padding: var(--alert--PaddingTop, 1rem) var(--alert--PaddingRight, 1rem) var(--alert--PaddingBottom, 1rem) var(--alert--PaddingLeft, 1rem);
+}
+
+.alert__title {
+  font-size: var(--alert__title--FontSize, 1.5rem);
+  margin-bottom: var(--alert__title--MarginBottom, 0.25rem);
+}
+
+.alert.is-primary {
+  border-color: var(--alert--primary--BorderColor, #39a5dc);
+  color: var(--alert--primary--Color, #39a5dc);
+}
+
+.alert.is-warning {
+  border-color: var(--alert--warning--BorderColor, #ec7a08);
+  color: var(--bualerttton--warning--Color, #ec7a08);
+}
+
+.alert.is-danger {
+  border-color: var(--alert--danger--BorderColor, #c00);
+  color: var(--alert--danger--Color, #c00);
+}
+
+.button {
+  --button--PaddingTop: var(--global--spacer--xs);
+  --button--PaddingRight: var(--global--spacer--xxl);
+  --button--PaddingBottom: var(--global--spacer--xs);
+  --button--PaddingLeft: var(--global--spacer--xxl);
+  --button--LineHeight: var(--global--sm--LineHeight);
+  --button--FontWeight: var(--global--normal--FontWeight);
+  --button--primary--BackgroundColor: var(--global--primary--Color);
+  --button--primary--hover--BackgroundColor: var(--global--primary-dark--Color);
+  --button--warning--BackgroundColor: var(--global--warning--Color);
+  --button--warning--hover--BackgroundColor: var(--global--warning--dark--Color);
+  --button--danger--BackgroundColor: var(--global--danger--Color);
+  --button--danger--hover--BorderColor: var(--global--danger-dark--Color);
+  --button--small--FontSize: var(--global--caption--FontSize);
+  --button--large--FontSize: var(--global--sub-title--FontSize);
+  display: inline-block;
+  padding: var(--button--PaddingTop, 0.5rem) var(--button--PaddingRight, 2rem) var(--button--PaddingBottom, 0.5rem) var(--button--PaddingLeft, 2rem);
+  font-size: var(--button--FontSize, 1rem);
+  font-weight: var(--button--FontWeight, 400);
+  line-height: var(--button--LineHeight, 1.2);
+  color: var(--button--Color, #fff);
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--button--BackgroundColor, #ccc);
+  border: none;
+  border-radius: 30rem;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+.button.has-focus {
+  color: var(--button--hover--Color, #fff);
+  background-color: var(--button--hover--BackgroundColor, #555);
+}
+
+.button:disabled,
+.button.is-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.button.is-small {
+  font-size: var(--button--small--FontSize, 0.9rem);
+}
+
+.button.is-large {
+  font-size: var(--button--large--FontSize, 1.2rem);
+}
+
+.button.is-block {
+  display: block;
+  width: 100%;
+}
+
+.button.is-primary {
+  background-color: var(--button--primary--BackgroundColor, #39a5dc);
+}
+
+.button.is-primary:hover,
+.button.is-primary:focus,
+.button.is-primary.has-focus {
+  background-color: var(--button--primary--hover--BackgroundColor, #0088ce);
+}
+
+.button.is-warning {
+  background-color: var(--button--warning--BackgroundColor, #ec7a08);
+}
+
+.button.is-warning:hover,
+.button.is-warning:focus,
+.button.is-warning.has-focus {
+  background-color: var(--button--warning--hover--BackgroundColor, #b35c00);
+}
+
+.button.is-danger {
+  background-color: var(--button--danger--BackgroundColor, #c00);
+}
+
+.button.is-danger:hover,
+.button.is-danger:focus,
+.button.is-danger.has-focus {
+  background-color: var(--button--danger--hover--BackgroundColor, #a30000);
+}
+
+.example {
+  margin: 1rem 0;
+}
